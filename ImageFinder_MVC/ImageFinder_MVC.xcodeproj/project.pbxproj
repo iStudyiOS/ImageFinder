@@ -3,21 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B888F6BB287EC9A54FE9F7A3 /* Pods_ImageFinder_MVC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A90EEB7104EF6A0AC87EB5 /* Pods_ImageFinder_MVC.framework */; };
 		BC25C041267A049700725E29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC25C040267A049700725E29 /* AppDelegate.swift */; };
 		BC25C043267A049700725E29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC25C042267A049700725E29 /* SceneDelegate.swift */; };
 		BC25C045267A049700725E29 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC25C044267A049700725E29 /* FeedViewController.swift */; };
 		BC25C04A267A049900725E29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC25C049267A049900725E29 /* Assets.xcassets */; };
 		BC25C04D267A049900725E29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC25C04B267A049900725E29 /* LaunchScreen.storyboard */; };
+		BCB1BD25267CE0AA008607A9 /* UnsplashPhotoPickerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB1BD24267CE0AA008607A9 /* UnsplashPhotoPickerConfiguration.swift */; };
+		BCB1BD29267CE3F6008607A9 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB1BD28267CE3F6008607A9 /* ImageCache.swift */; };
 		BCC25B44267B95B000BE00C4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC25B43267B95B000BE00C4 /* Extension.swift */; };
 		BCC25B47267B96BC00BE00C4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC25B46267B96BC00BE00C4 /* TabBarController.swift */; };
 		BCC25B4B267B9C6E00BE00C4 /* LikedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC25B4A267B9C6E00BE00C4 /* LikedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6BD64FB63E2D6083B24393E0 /* Pods-ImageFinder_MVC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageFinder_MVC.debug.xcconfig"; path = "Target Support Files/Pods-ImageFinder_MVC/Pods-ImageFinder_MVC.debug.xcconfig"; sourceTree = "<group>"; };
+		B9A90EEB7104EF6A0AC87EB5 /* Pods_ImageFinder_MVC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageFinder_MVC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC25C03D267A049700725E29 /* ImageFinder_MVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFinder_MVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC25C040267A049700725E29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC25C042267A049700725E29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,9 +30,12 @@
 		BC25C049267A049900725E29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC25C04C267A049900725E29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC25C04E267A049900725E29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCB1BD24267CE0AA008607A9 /* UnsplashPhotoPickerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPhotoPickerConfiguration.swift; sourceTree = "<group>"; };
+		BCB1BD28267CE3F6008607A9 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		BCC25B43267B95B000BE00C4 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		BCC25B46267B96BC00BE00C4 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BCC25B4A267B9C6E00BE00C4 /* LikedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedViewController.swift; sourceTree = "<group>"; };
+		CAA7A00C7D8583537EA10CC8 /* Pods-ImageFinder_MVC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageFinder_MVC.release.xcconfig"; path = "Target Support Files/Pods-ImageFinder_MVC/Pods-ImageFinder_MVC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B888F6BB287EC9A54FE9F7A3 /* Pods_ImageFinder_MVC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		497BFC9B77159EFF1793B94B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6BD64FB63E2D6083B24393E0 /* Pods-ImageFinder_MVC.debug.xcconfig */,
+				CAA7A00C7D8583537EA10CC8 /* Pods-ImageFinder_MVC.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		ACCA0DE28F4E10D5E912B344 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9A90EEB7104EF6A0AC87EB5 /* Pods_ImageFinder_MVC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BC25C034267A049700725E29 = {
 			isa = PBXGroup;
 			children = (
 				BC25C03F267A049700725E29 /* ImageFinder_MVC */,
 				BC25C03E267A049700725E29 /* Products */,
+				497BFC9B77159EFF1793B94B /* Pods */,
+				ACCA0DE28F4E10D5E912B344 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +88,7 @@
 		BC25C03F267A049700725E29 /* ImageFinder_MVC */ = {
 			isa = PBXGroup;
 			children = (
+				BCB1BD23267CE090008607A9 /* API */,
 				BC25C040267A049700725E29 /* AppDelegate.swift */,
 				BCC25B46267B96BC00BE00C4 /* TabBarController.swift */,
 				BC25C042267A049700725E29 /* SceneDelegate.swift */,
@@ -73,6 +102,15 @@
 			path = ImageFinder_MVC;
 			sourceTree = "<group>";
 		};
+		BCB1BD23267CE090008607A9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				BCB1BD24267CE0AA008607A9 /* UnsplashPhotoPickerConfiguration.swift */,
+				BCB1BD28267CE3F6008607A9 /* ImageCache.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +118,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC25C051267A049900725E29 /* Build configuration list for PBXNativeTarget "ImageFinder_MVC" */;
 			buildPhases = (
+				E42E6EDAD0313904BCB6C129 /* [CP] Check Pods Manifest.lock */,
 				BC25C039267A049700725E29 /* Sources */,
 				BC25C03A267A049700725E29 /* Frameworks */,
 				BC25C03B267A049700725E29 /* Resources */,
+				D9F053AD8633A4434D340526 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,6 +177,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D9F053AD8633A4434D340526 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageFinder_MVC/Pods-ImageFinder_MVC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageFinder_MVC/Pods-ImageFinder_MVC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImageFinder_MVC/Pods-ImageFinder_MVC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E42E6EDAD0313904BCB6C129 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageFinder_MVC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BC25C039267A049700725E29 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -144,9 +226,11 @@
 			files = (
 				BC25C045267A049700725E29 /* FeedViewController.swift in Sources */,
 				BC25C041267A049700725E29 /* AppDelegate.swift in Sources */,
+				BCB1BD29267CE3F6008607A9 /* ImageCache.swift in Sources */,
 				BC25C043267A049700725E29 /* SceneDelegate.swift in Sources */,
 				BCC25B47267B96BC00BE00C4 /* TabBarController.swift in Sources */,
 				BCC25B4B267B9C6E00BE00C4 /* LikedViewController.swift in Sources */,
+				BCB1BD25267CE0AA008607A9 /* UnsplashPhotoPickerConfiguration.swift in Sources */,
 				BCC25B44267B95B000BE00C4 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +367,7 @@
 		};
 		BC25C052267A049900725E29 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BD64FB63E2D6083B24393E0 /* Pods-ImageFinder_MVC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +387,7 @@
 		};
 		BC25C053267A049900725E29 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAA7A00C7D8583537EA10CC8 /* Pods-ImageFinder_MVC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
