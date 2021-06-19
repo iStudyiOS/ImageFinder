@@ -88,18 +88,26 @@
 		BC25C03F267A049700725E29 /* ImageFinder_MVC */ = {
 			isa = PBXGroup;
 			children = (
+				BC9AB214267E350B00A532BD /* View */,
 				BCB1BD23267CE090008607A9 /* API */,
 				BC25C040267A049700725E29 /* AppDelegate.swift */,
-				BCC25B46267B96BC00BE00C4 /* TabBarController.swift */,
 				BC25C042267A049700725E29 /* SceneDelegate.swift */,
-				BC25C044267A049700725E29 /* FeedViewController.swift */,
 				BC25C049267A049900725E29 /* Assets.xcassets */,
 				BC25C04B267A049900725E29 /* LaunchScreen.storyboard */,
 				BC25C04E267A049900725E29 /* Info.plist */,
 				BCC25B43267B95B000BE00C4 /* Extension.swift */,
-				BCC25B4A267B9C6E00BE00C4 /* LikedViewController.swift */,
 			);
 			path = ImageFinder_MVC;
+			sourceTree = "<group>";
+		};
+		BC9AB214267E350B00A532BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC25C044267A049700725E29 /* FeedViewController.swift */,
+				BCC25B4A267B9C6E00BE00C4 /* LikedViewController.swift */,
+				BCC25B46267B96BC00BE00C4 /* TabBarController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BCB1BD23267CE090008607A9 /* API */ = {
