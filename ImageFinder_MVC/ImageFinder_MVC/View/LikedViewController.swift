@@ -9,7 +9,8 @@ import UIKit
 
 class LikedViewController: UIViewController {
     
-    var photoCollectionView: UICollectionView?
+    var likedCollectionView: UICollectionView!
+    var cellId = "likedCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,18 +28,33 @@ class LikedViewController: UIViewController {
         layout.minimumLineSpacing = 20
         layout.itemSize = CGSize(width: size, height: size)
         
-        photoCollectionView = UICollectionView(frame: self.view.frame,
+        likedCollectionView = UICollectionView(frame: self.view.frame,
                                               collectionViewLayout: layout)
-        guard let collectionView = photoCollectionView else { return }
-        collectionView.backgroundColor = .blue
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(photoCollectionView ?? UIView())
+        likedCollectionView.dataSource = self
+        likedCollectionView.delegate = self
+        likedCollectionView.register(LikedCell.self, forCellWithReuseIdentifier: cellId)
+        likedCollectionView.backgroundColor = .systemBackground
+        likedCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(likedCollectionView)
         
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            collectionView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            collectionView.rightAnchor.constraint(equalTo: view.rightAnchor)
+            likedCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            likedCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            likedCollectionView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            likedCollectionView.rightAnchor.constraint(equalTo: view.rightAnchor)
         ])
+    }
+}
+
+// MARK: - UICollectionViewDataSource & Delegate Methods
+extension LikedViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+        
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! LikedCell
+        cell.backgroundColor = .black
+        return cell
     }
 }

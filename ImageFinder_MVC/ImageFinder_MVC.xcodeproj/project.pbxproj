@@ -18,6 +18,8 @@
 		BCC25B44267B95B000BE00C4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC25B43267B95B000BE00C4 /* Extension.swift */; };
 		BCC25B47267B96BC00BE00C4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC25B46267B96BC00BE00C4 /* TabBarController.swift */; };
 		BCC25B4B267B9C6E00BE00C4 /* LikedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC25B4A267B9C6E00BE00C4 /* LikedViewController.swift */; };
+		BCDE13B52680817100D44EFB /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE13B42680817000D44EFB /* Photo.swift */; };
+		BCDE13B92680B64500D44EFB /* LikedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE13B82680B64500D44EFB /* LikedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		BCC25B43267B95B000BE00C4 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		BCC25B46267B96BC00BE00C4 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BCC25B4A267B9C6E00BE00C4 /* LikedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedViewController.swift; sourceTree = "<group>"; };
+		BCDE13B42680817000D44EFB /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		BCDE13B82680B64500D44EFB /* LikedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedCell.swift; sourceTree = "<group>"; };
 		CAA7A00C7D8583537EA10CC8 /* Pods-ImageFinder_MVC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageFinder_MVC.release.xcconfig"; path = "Target Support Files/Pods-ImageFinder_MVC/Pods-ImageFinder_MVC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +92,7 @@
 		BC25C03F267A049700725E29 /* ImageFinder_MVC */ = {
 			isa = PBXGroup;
 			children = (
+				BCDE13B32680816400D44EFB /* Model */,
 				BC9AB214267E350B00A532BD /* View */,
 				BCB1BD23267CE090008607A9 /* API */,
 				BC25C040267A049700725E29 /* AppDelegate.swift */,
@@ -106,6 +111,7 @@
 				BC25C044267A049700725E29 /* FeedViewController.swift */,
 				BCC25B4A267B9C6E00BE00C4 /* LikedViewController.swift */,
 				BCC25B46267B96BC00BE00C4 /* TabBarController.swift */,
+				BCDE13B82680B64500D44EFB /* LikedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -117,6 +123,14 @@
 				BCB1BD28267CE3F6008607A9 /* ImageCache.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		BCDE13B32680816400D44EFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BCDE13B42680817000D44EFB /* Photo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,9 +249,11 @@
 				BC25C045267A049700725E29 /* FeedViewController.swift in Sources */,
 				BC25C041267A049700725E29 /* AppDelegate.swift in Sources */,
 				BCB1BD29267CE3F6008607A9 /* ImageCache.swift in Sources */,
+				BCDE13B52680817100D44EFB /* Photo.swift in Sources */,
 				BC25C043267A049700725E29 /* SceneDelegate.swift in Sources */,
 				BCC25B47267B96BC00BE00C4 /* TabBarController.swift in Sources */,
 				BCC25B4B267B9C6E00BE00C4 /* LikedViewController.swift in Sources */,
+				BCDE13B92680B64500D44EFB /* LikedCell.swift in Sources */,
 				BCB1BD25267CE0AA008607A9 /* UnsplashPhotoPickerConfiguration.swift in Sources */,
 				BCC25B44267B95B000BE00C4 /* Extension.swift in Sources */,
 			);

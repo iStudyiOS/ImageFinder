@@ -12,8 +12,8 @@ struct  Configuration {
 }
 
 public struct UnsplashPhotoPickerConfiguration {
-    public var accessKey = ""
-    public var secretKey = ""
+    public var accessKey = "_6Gz9Ax5qlkm9RkWRBPBDDVcKT1gJ9awd34HaZ2HPYM"
+    public var secretKey = "5EU3HvTy5AgiUB01HuMvrRCN1gkVAC-sWBPeWe2oj8o"
     public var query: String?
     public var allowsMultipleSelection = false
     public var memoryCapacity = 50
