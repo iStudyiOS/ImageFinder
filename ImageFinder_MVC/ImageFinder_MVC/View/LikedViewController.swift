@@ -49,12 +49,19 @@ class LikedViewController: UIViewController {
 // MARK: - UICollectionViewDataSource & Delegate Methods
 extension LikedViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 10
     }
         
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! LikedCell
         cell.backgroundColor = .black
+        
+        NSLayoutConstraint.activate([
+            cell.imageView.topAnchor.constraint(equalTo: cell.topAnchor),
+            cell.imageView.leftAnchor.constraint(equalTo: cell.leftAnchor),
+            cell.imageView.rightAnchor.constraint(equalTo: cell.rightAnchor),
+            cell.imageView.bottomAnchor.constraint(equalTo: cell.bottomAnchor)
+        ])
         return cell
     }
 }
