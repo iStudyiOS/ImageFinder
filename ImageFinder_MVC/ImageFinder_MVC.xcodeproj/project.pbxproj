@@ -13,7 +13,7 @@
 		BC25C045267A049700725E29 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC25C044267A049700725E29 /* FeedViewController.swift */; };
 		BC25C04A267A049900725E29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC25C049267A049900725E29 /* Assets.xcassets */; };
 		BC25C04D267A049900725E29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC25C04B267A049900725E29 /* LaunchScreen.storyboard */; };
-		BCAE6281268207B3000BCFB3 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAE6280268207B3000BCFB3 /* NetworkError.swift */; };
+		BC32216F26837ABA001ABE70 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC32216E26837ABA001ABE70 /* Network.swift */; };
 		BCB1BD25267CE0AA008607A9 /* UnsplashPhotoPickerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB1BD24267CE0AA008607A9 /* UnsplashPhotoPickerConfiguration.swift */; };
 		BCB1BD29267CE3F6008607A9 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB1BD28267CE3F6008607A9 /* ImageCache.swift */; };
 		BCC25B44267B95B000BE00C4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC25B43267B95B000BE00C4 /* Extension.swift */; };
@@ -33,7 +33,7 @@
 		BC25C049267A049900725E29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC25C04C267A049900725E29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC25C04E267A049900725E29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BCAE6280268207B3000BCFB3 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		BC32216E26837ABA001ABE70 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		BCB1BD24267CE0AA008607A9 /* UnsplashPhotoPickerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPhotoPickerConfiguration.swift; sourceTree = "<group>"; };
 		BCB1BD28267CE3F6008607A9 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		BCC25B43267B95B000BE00C4 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 		BCAE6283268208FC000BCFB3 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				BCAE6280268207B3000BCFB3 /* NetworkError.swift */,
+				BC32216E26837ABA001ABE70 /* Network.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -257,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC32216F26837ABA001ABE70 /* Network.swift in Sources */,
 				BC25C045267A049700725E29 /* FeedViewController.swift in Sources */,
 				BC25C041267A049700725E29 /* AppDelegate.swift in Sources */,
 				BCB1BD29267CE3F6008607A9 /* ImageCache.swift in Sources */,
@@ -266,7 +267,6 @@
 				BCC25B4B267B9C6E00BE00C4 /* LikedViewController.swift in Sources */,
 				BCDE13B92680B64500D44EFB /* LikedCell.swift in Sources */,
 				BCB1BD25267CE0AA008607A9 /* UnsplashPhotoPickerConfiguration.swift in Sources */,
-				BCAE6281268207B3000BCFB3 /* NetworkError.swift in Sources */,
 				BCC25B44267B95B000BE00C4 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
