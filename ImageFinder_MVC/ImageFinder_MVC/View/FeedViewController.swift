@@ -15,6 +15,7 @@ class FeedViewController: UIViewController {
         super.viewDidLoad()
         
         setCollectionView()
+        getPhotos()
     }
     
     // MARK: - UI Methods
@@ -49,7 +50,7 @@ class FeedViewController: UIViewController {
     func getPhotos() {
         let unsplash = UnsplashPhotoPickerConfiguration()
         NetworkService().request(request: .get, url: unsplash.apiURL + "photos/?client_id" + unsplash.accessKey, body: nil) { result in
-            result.
+            print(result)
         }
     }
 }
