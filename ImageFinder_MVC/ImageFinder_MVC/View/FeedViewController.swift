@@ -16,6 +16,7 @@ class FeedViewController: UIViewController {
         
         setCollectionView()
         getPhotos()
+        // JSON 데이터 받아오는 함수와 받아와서 URL을 이미지로 바꿔주는 함수
     }
     
     // MARK: - UI Methods
