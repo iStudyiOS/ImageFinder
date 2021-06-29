@@ -10,6 +10,7 @@ import UIKit
 class FeedViewController: UIViewController {
     var feedCollectionView: UICollectionView!
     var cellId = "feedCell"
+    var photos: Photos = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +35,7 @@ class FeedViewController: UIViewController {
                                               collectionViewLayout: layout)
         feedCollectionView.dataSource = self
         feedCollectionView.delegate = self
-        feedCollectionView.register(LikedCell.self, forCellWithReuseIdentifier: cellId)
+        feedCollectionView.register(FeedCell.self, forCellWithReuseIdentifier: cellId)
         feedCollectionView.backgroundColor = .systemBackground
         feedCollectionView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(feedCollectionView)
@@ -50,8 +51,26 @@ class FeedViewController: UIViewController {
     // MARK: - Call API Methods
     func getPhotos() {
         let unsplash = UnsplashPhotoPickerConfiguration()
-        NetworkService().request(request: .get, url: unsplash.apiURL + "photos/?client_id" + unsplash.accessKey, body: nil) { result in
-            print(result)
+        NetworkService().request(request: .get, url: unsplash.apiURL + "photos/?client_id=" + unsplash.accessKey, body: nil) { result in
+            switch result {
+            case .success(let data):
+                self.parse(json: data)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    func parse(json: Data) {
+        let decoder = JSONDecoder()
+        do {
+            let photos = try decoder.decode(Photos.self, from: json)
+            self.photos.append(contentsOf: photos)
+            DispatchQueue.main.async {
+                self.feedCollectionView.reloadData()
+            }
+        } catch {
+            print(error)
         }
     }
 }
@@ -59,21 +78,26 @@ class FeedViewController: UIViewController {
 // MARK: - UICollectionViewDataSource & Delegate Methods
 extension FeedViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return photos.count
     }
         
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! LikedCell
-        cell.backgroundColor = .black
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! FeedCell
         
         cell.layer.cornerRadius = 8
+        cell.imageView.layer.cornerRadius = 8
+        cell.imageView.clipsToBounds = true
         
-        NSLayoutConstraint.activate([
-            cell.imageView.topAnchor.constraint(equalTo: cell.topAnchor),
-            cell.imageView.leftAnchor.constraint(equalTo: cell.leftAnchor),
-            cell.imageView.rightAnchor.constraint(equalTo: cell.rightAnchor),
-            cell.imageView.bottomAnchor.constraint(equalTo: cell.bottomAnchor)
-        ])
+        cell.configure(on: cell)
+        
+        if !photos.isEmpty {
+            let url = URL(string: photos[indexPath.row].urls.raw)
+            let data = try! Data(contentsOf: url!)
+            DispatchQueue.main.async {
+                cell.imageView.image = UIImage(data: data)
+            }
+        }
+        
         return cell
     }
 }

@@ -15,6 +15,7 @@
 		BC25C04D267A049900725E29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC25C04B267A049900725E29 /* LaunchScreen.storyboard */; };
 		BC32216F26837ABA001ABE70 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC32216E26837ABA001ABE70 /* Network.swift */; };
 		BC32217326838542001ABE70 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC32217226838542001ABE70 /* FeedCell.swift */; };
+		BC90351D268B3160005D3327 /* LikeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC90351C268B3160005D3327 /* LikeAnimator.swift */; };
 		BCB1BD25267CE0AA008607A9 /* UnsplashPhotoPickerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB1BD24267CE0AA008607A9 /* UnsplashPhotoPickerConfiguration.swift */; };
 		BCB1BD29267CE3F6008607A9 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB1BD28267CE3F6008607A9 /* ImageCache.swift */; };
 		BCC25B44267B95B000BE00C4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC25B43267B95B000BE00C4 /* Extension.swift */; };
@@ -36,6 +37,7 @@
 		BC25C04E267A049900725E29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC32216E26837ABA001ABE70 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		BC32217226838542001ABE70 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		BC90351C268B3160005D3327 /* LikeAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAnimator.swift; sourceTree = "<group>"; };
 		BCB1BD24267CE0AA008607A9 /* UnsplashPhotoPickerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPhotoPickerConfiguration.swift; sourceTree = "<group>"; };
 		BCB1BD28267CE3F6008607A9 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		BCC25B43267B95B000BE00C4 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				BCC25B46267B96BC00BE00C4 /* TabBarController.swift */,
 				BCDE13B82680B64500D44EFB /* LikedCell.swift */,
 				BC32217226838542001ABE70 /* FeedCell.swift */,
+				BC90351C268B3160005D3327 /* LikeAnimator.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				BC25C041267A049700725E29 /* AppDelegate.swift in Sources */,
 				BCB1BD29267CE3F6008607A9 /* ImageCache.swift in Sources */,
 				BCDE13B52680817100D44EFB /* Photo.swift in Sources */,
+				BC90351D268B3160005D3327 /* LikeAnimator.swift in Sources */,
 				BC32217326838542001ABE70 /* FeedCell.swift in Sources */,
 				BC25C043267A049700725E29 /* SceneDelegate.swift in Sources */,
 				BCC25B47267B96BC00BE00C4 /* TabBarController.swift in Sources */,
@@ -340,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -395,7 +399,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

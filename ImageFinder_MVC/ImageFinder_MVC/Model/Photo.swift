@@ -6,30 +6,12 @@
 //
 
 import UIKit
+typealias Photos = [Photo]
 
 public struct Photo: Codable {
-    public enum URLKind: String, Codable {
-        case raw
-        case full
-        case regular
-        case small
-        case thumb
+    public struct Urls: Codable {
+        let raw, full, regular, small, thumb: String
     }
     
-    public enum LinkKind: String, Codable {
-        case own = "self"
-        case html
-        case download
-        case downloadLocation = "download_location"
-    }
-    
-    public let identifier: String
-    public let urls: [URLKind: URL]
-    public let links: [LinkKind: URL]
-    
-    private enum CodingKeys: String, CodingKey {
-        case identifier = "id"
-        case urls
-        case links
-    }
+    public let urls: Urls
 }

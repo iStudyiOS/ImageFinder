@@ -57,6 +57,7 @@ final class NetworkService: NetworkServiceType {
         guard let url = URL(string: url) else {
             return completion(.failure(.invalidURL))
         }
+        print(url)
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = type.description
         urlRequest.httpBody = body
@@ -67,10 +68,10 @@ final class NetworkService: NetworkServiceType {
                 completion(.failure(.unknownError(message: error?.localizedDescription ?? "Unknown Error")))
                 return
             }
-            guard let response = response as? HTTPURLResponse, (200..<300).contains(response.statusCode) else {
-                completion(.failure(.unsuccessfulResponse))
-                return
-            }
+//            guard let response = response as? HTTPURLResponse, (200..<300).contains(response.statusCode) else {
+//                completion(.failure(.unsuccessfulResponse))
+//                return
+//            }
             guard let data = data else {
                 completion(.failure(.APIInvalidResponse))
                 return
@@ -78,4 +79,6 @@ final class NetworkService: NetworkServiceType {
             completion(.success(data))
         }.resume()
     }
+    
+
 }
