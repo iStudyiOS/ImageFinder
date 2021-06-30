@@ -14,9 +14,11 @@ class FeedCell: UICollectionViewCell {
         return imageView
     }()
     let heartImageView: UIImageView = {
-        let imageVIew = UIImageView()
-        imageVIew.translatesAutoresizingMaskIntoConstraints = false
-        return imageVIew
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = UIImage(systemName: "heart.fill")
+        imageView.tintColor = .red
+        return imageView
     }()
     
 //    lazy var likeAnimator = LikeAnimator(container: contentView, layout)
@@ -32,7 +34,12 @@ class FeedCell: UICollectionViewCell {
             cell.imageView.topAnchor.constraint(equalTo: cell.topAnchor),
             cell.imageView.leftAnchor.constraint(equalTo: cell.leftAnchor),
             cell.imageView.rightAnchor.constraint(equalTo: cell.rightAnchor),
-            cell.imageView.bottomAnchor.constraint(equalTo: cell.bottomAnchor)
+            cell.imageView.bottomAnchor.constraint(equalTo: cell.bottomAnchor),
+            
+            heartImageView.topAnchor.constraint(equalTo: cell.topAnchor, constant: cell.bounds.width / 3),
+            heartImageView.leftAnchor.constraint(equalTo: cell.leftAnchor, constant: cell.bounds.width / 3),
+            heartImageView.widthAnchor.constraint(equalTo: cell.widthAnchor, multiplier: 0.3),
+            heartImageView.heightAnchor.constraint(equalTo: cell.heightAnchor, multiplier: 0.3)
         ])
     }
     
