@@ -41,6 +41,8 @@ class FeedCell: UICollectionViewCell {
             heartImageView.widthAnchor.constraint(equalTo: cell.widthAnchor, multiplier: 0.3),
             heartImageView.heightAnchor.constraint(equalTo: cell.heightAnchor, multiplier: 0.3)
         ])
+        
+        heartImageView.isHidden = true
     }
     
     func addViews() {
