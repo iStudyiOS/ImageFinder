@@ -88,7 +88,7 @@ extension FeedViewController: UICollectionViewDataSource, UICollectionViewDelega
         cell.imageView.layer.cornerRadius = 8
         cell.imageView.clipsToBounds = true
         
-        cell.configure(on: 765cell)
+        cell.configure(on: cell)
         
         if !photos.isEmpty {
             let url = URL(string: photos[indexPath.row].urls.raw)
