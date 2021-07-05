@@ -11,13 +11,13 @@ class FeedViewController: UIViewController {
     var feedCollectionView: UICollectionView!
     var cellId = "feedCell"
     var photos: Photos = []
+    var images: [UIImage] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setCollectionView()
         getPhotos()
-        // JSON 데이터 받아오는 함수와 받아와서 URL을 이미지로 바꿔주는 함수
     }
     
     // MARK: - UI Methods
@@ -66,6 +66,12 @@ class FeedViewController: UIViewController {
         do {
             let photos = try decoder.decode(Photos.self, from: json)
             self.photos.append(contentsOf: photos)
+            photos.forEach { photo in
+                let url = URL(string: photo.urls.thumb)
+                let data = try! Data(contentsOf: url!)
+                guard let image = UIImage(data: data) else { return }
+                self.images.append(image)
+            }
             DispatchQueue.main.async {
                 self.feedCollectionView.reloadData()
             }
@@ -89,12 +95,11 @@ extension FeedViewController: UICollectionViewDataSource, UICollectionViewDelega
         cell.imageView.clipsToBounds = true
         
         cell.configure(on: cell)
+        cell.isUserInteractionEnabled = false
         
         if !photos.isEmpty {
-            let url = URL(string: photos[indexPath.row].urls.raw)
-            let data = try! Data(contentsOf: url!)
             DispatchQueue.main.async {
-                cell.imageView.image = UIImage(data: data)
+                cell.imageView.image = self.images[indexPath.row]
             }
         }
         

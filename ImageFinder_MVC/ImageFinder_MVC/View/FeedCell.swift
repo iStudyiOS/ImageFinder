@@ -42,12 +42,25 @@ class FeedCell: UICollectionViewCell {
             heartImageView.heightAnchor.constraint(equalTo: cell.heightAnchor, multiplier: 0.3)
         ])
         
+        cell.addGetsureRecognizer()
         heartImageView.isHidden = true
     }
     
     func addViews() {
         addSubview(imageView)
         addSubview(heartImageView)
+    }
+    
+    func heartAnimation() {
+        heartImageView.isHidden = false
+        UIView.animate(withDuration: 0.1, animations: {
+            self.heartImageView.transform.scaledBy(x: 0.8, y: 0.8)
+        }) { _ in
+            UIView.animate(withDuration: 0.1, animations: {
+                self.heartImageView.transform = CGAffineTransform.identity
+            })
+            self.heartImageView.isHidden = true
+        }
     }
     
     func addGetsureRecognizer() {
@@ -57,7 +70,7 @@ class FeedCell: UICollectionViewCell {
     }
     
     @objc func doubleTapped() {
-        
+        heartAnimation()
     }
     
     required init?(coder aDecoder: NSCoder) {

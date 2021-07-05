@@ -20,11 +20,11 @@ class LikedViewController: UIViewController {
     
     func setCollectionView() {
         let layout = UICollectionViewFlowLayout()
-        let size = (view.frame.width - 120) / 2
+        let size = (view.frame.width - 80) / 2
         layout.sectionInset = UIEdgeInsets(top: 20,
-                                           left: 40,
+                                           left: 30,
                                            bottom: 20,
-                                           right: 40)
+                                           right: 30)
         layout.minimumLineSpacing = 20
         layout.itemSize = CGSize(width: size, height: size)
         
@@ -55,6 +55,12 @@ extension LikedViewController: UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! LikedCell
         cell.backgroundColor = .black
+        
+        cell.layer.cornerRadius = 8
+        cell.imageView.layer.cornerRadius = 8
+        cell.imageView.clipsToBounds = true
+        
+        cell.configure(on: cell)
         
         NSLayoutConstraint.activate([
             cell.imageView.topAnchor.constraint(equalTo: cell.topAnchor),
